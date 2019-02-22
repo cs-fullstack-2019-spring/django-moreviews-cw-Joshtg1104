@@ -6,4 +6,7 @@ from django.db import models
 class Cup(models.Model):
     name = models.CharField(max_length=200, default="")
     material = models.CharField(max_length=200, default="")
-    manufactuerDate = models.DateField(default="")
+    manufacturerDate = models.DateField(default="")
+
+    def __self__(self):
+        return f'{self.name}'
